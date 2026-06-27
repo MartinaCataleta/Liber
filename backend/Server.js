@@ -58,7 +58,10 @@ const port = process.env.PORT || 3000;
 
 connectDB();
 
-app.use(cors());
+app.use(cors({
+    origin: "https://liber-1.onrender.com/LoginPage", // Metti l'URL del tuo React
+    credentials: true
+}));
 app.use(express.json()); 
 app.use(cookieParser()); 
 
@@ -91,4 +94,8 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log("Utente disconnesso");
   });
+});
+
+app.get('/', (req, res) => {
+  res.send('API del progetto Liber in esecuzione correttamente! 🚀');
 });
