@@ -123,7 +123,7 @@ async function refresh(req,res){
         res.cookie('accessToken', newAccessToken, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            sameSite: 'none',
+            sameSite: 'lax',
             maxAge: 15*60*1000
         });
 
@@ -151,14 +151,14 @@ async function logout(req,res){
         res.clearCookie('accessToken', {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            sameSite: 'none'
+            sameSite: 'lax'
         });
 
         res.clearCookie('refreshToken', {
             path: '/api/v1/auth/refresh', 
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
-            sameSite: 'none'
+            sameSite: 'lax'
         });
 
         return res.status(200).json({ message: 'Successful logout'});
