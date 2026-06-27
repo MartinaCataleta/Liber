@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,500;0,800;1,400&display=swap');
+
+.sfondo-login-page{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.687), rgba(0, 0, 0, 0.6)), url('../assets/Backgorundrefresh.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: relative; 
+  overflow: hidden;  
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 100vh; 
+  width: 100vw; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+}
+
+.nav-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.nav-sinistra {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.titolo-app {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.titolo-app:hover{
+  cursor: pointer;
+  color: yellowgreen;
+}
+
+.nav-destra {
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-to-refresh{
+  border: 1px solid whitesmoke;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: transparent;
+  color: aliceblue;
+  padding: 8px 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn-to-refresh:hover{
+  color: rgb(88, 131, 102);
+  border-color: rgb(88, 131, 102);
+}
+
+.link-to-refresh{
+  color: whitesmoke;
+}
+
+ .auth-box {
+  background-color:#bec0be7d;
+  padding: 45px 50px;
+  border-radius: 24px; 
+  box-shadow: 0 15px 35px rgba(139, 115, 106, 0.08); 
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  align-self: center;
+  margin-top: 110px;
+}
+
+.campo-form input{
+  color: rgba(245, 245, 245, 0.936);
+  background-color: rgb(31, 149, 51);
+  border-radius: 6px;
+  border: solid 1px black;
+  
+}
+
+.auth-box h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 34px;
+  color: #000000; 
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.auth-box p {
+  color: #000000; 
+  font-size: large;
+  margin-bottom: 15px;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 22px;
+}
+.campo-form label {
+  font-size: 14px;
+  font-size: larger;
+  color: #000000; 
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.campo-form input {
+  padding: 14px 16px;
+  border: 1px solid #e3dbd8;
+  border-radius: 12px;
+  background-color: #fdfaf9; 
+  font-size: 15px;
+  color: #000000;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.campo-form input:focus {
+  outline: none;
+  border-color: #ffdd00; 
+  box-shadow: 0 0 0 4px rgba(59, 117, 54, 0.94); 
+}
+
+.btn-accedi {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  background-color: rgba(30, 74, 27, 0.94); 
+  color: rgb(225, 255, 234);
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-accedi:hover {
+  background-color: #08381b;
+}
+
+.btn-accedi:active {
+  transform: scale(0.98); 
+}
+
+.link-al-register {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #0d7106;
+}
+
+.link-al-register button {
+  background: none;
+  border: none;
+  color: #000000;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+  text-decoration: underline;
+  text-decoration-color: transparent; 
+  transition: text-decoration-color 0.3s ease;
+}
+
+.link-al-register button:hover {
+  text-decoration-color: #000000;
+}
+
+/* MEDIA QUERIES RESPONSIVE */
+
+@media (max-width: 768px) {
+  .nav-login {
+    padding: 15px 20px;
+  }
+  
+  .auth-box {
+    padding: 35px 30px;
+    margin-top: 80px;
+    width: 90%;
+  }
+
+  .auth-box h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-login {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .auth-box {
+    padding: 25px 20px;
+    margin-top: 50px;
+    width: 95%;
+  }
+
+  .auth-box h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .btn-to-refresh {
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+}

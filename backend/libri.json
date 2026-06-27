@@ -1,0 +1,290 @@
+
+[{  
+    "titolo": "1984",
+    "autore": "George Orwell",
+    "genere": "Fantascienza / Distopia",
+    "pagine": 328,
+    "anno": 1949,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788867584208_0_0_536_0_75.jpg"
+},
+{  "titolo": "Orgoglio e Pregiudizio",
+    "autore": "Jane Austen",
+    "genere": "Classico / Romanzo",
+    "pagine": 432,
+    "anno": 1813,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788822773876_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Harry Potter e la Pietra Filosofale",
+    "autore": "J.K. Rowling",
+    "genere": "Fantasy",
+    "pagine": 304,
+    "anno": 1997,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788831003827_0_0_536_0_75.jpg"
+
+},
+{
+    "titolo": "Il Nome della Rosa",
+    "autore": "Umberto Eco",
+    "genere": "Giallo Storico",
+    "pagine": 503,
+    "anno": 1980,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788834603000_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Fahrenheit 451",
+    "autore": "Ray Bradbury",
+    "genere": "Fantascienza / Distopia",
+    "pagine": 256,
+    "anno": 1953,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788804783497_0_0_424_0_75.jpg"
+
+},
+  {"titolo": "Il Ritratto di Dorian Gray",
+    "autore": "Oscar Wilde",
+    "genere": "Gotico / Filosofico",
+    "pagine": 254,
+    "anno": 1890,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788854983786_0_0_536_0_75.jpg"
+  },
+{
+    "titolo": "Il Trono di Spade",
+    "autore": "George R.R. Martin",
+    "genere": "Fantasy",
+    "pagine": 694,
+    "anno": 1996,
+    "copertinaURL": "https://www.ibs.it/images/9788804666844_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Il Grande Gatsby",
+    "autore": "F. Scott Fitzgerald",
+    "genere": "Classico Contemporaneo",
+    "pagine": 180,
+    "anno": 1925,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9791256730964_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "La coscienza di Zeno",
+    "autore": "Italo Svevo",
+    "genere": "Romanzo Psicologico",
+    "pagine": 438,
+    "anno": 1923,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788854983755_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Madame Bovary",
+    "autore": "Gustave Flaubert",
+    "genere": "Realismo",
+    "pagine": 384,
+    "anno": 1856,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788807900983_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "La Metamorfosi",
+    "autore": "Franz Kafka",
+    "genere": "Racconto",
+    "pagine": 104,
+    "anno": 1915,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9791224203117_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "American Gods",
+    "autore": "Neil Gaiman",
+    "genere": "Fantasy Contemporaneo",
+    "pagine": 528,
+    "anno": 2001,
+    "copertinaURL": "https://www.mondadori.it/content/uploads/2018/03/978880468405HIG-768x1156.jpg"
+},
+{
+    "titolo": "Percy Jackson e gli dei dell'Olimpo: Il ladro di fulmini",
+    "autore": "Rick Riordan",
+    "genere": "Fantasy / Young Adult",
+    "pagine": 361,
+    "anno": 2005,
+    "copertinaURL": "https://m.media-amazon.com/images/I/81wDYR33peL._SY466_.jpg"
+},
+{   
+    "titolo": "Antigone",
+    "autore": "Sofocle",
+    "genere": "Tragedia",
+    "pagine": 144,
+    "anno": -442,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788818038644_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Le cronache di Narnia: Il leone, la strega e l'armadio",
+    "autore": "C.S. Lewis",
+    "genere": "Fantasy",
+    "pagine": 187,
+    "anno": 1950,
+    "copertinaURL": "https://www.ibs.it/images/9788804806318_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Il Piccolo Principe",
+    "autore": "Antoine de Saint-Exupéry",
+    "genere": "Classici",
+    "pagine": 124,
+    "anno": 1943,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788817091657_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Hunger Games",
+    "autore": "Suzanne Collins",
+    "genere": "Sci-fi",
+    "pagine": 372,
+    "anno": 2008,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788804780403_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Il Codice da Vinci",
+    "autore": "Dan Brown",
+    "genere": "Thriller",
+    "pagine": 524,
+    "anno": 2003,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/2570161909019_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Colpa delle stelle",
+    "autore": "John Green",
+    "genere": "Romantici",
+    "pagine": 320,
+    "anno": 2012,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788817094368_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "It",
+    "autore": "Stephen King",
+    "genere": "Thriller",
+    "pagine": 1316,
+    "anno": 1986,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9781473666948_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "La verità sul caso Harry Quebert",
+    "autore": "Joël Dicker",
+    "genere": "Gialli",
+    "pagine": 779,
+    "anno": 2012,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788834611852_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Mille splendidi soli",
+    "autore": "Khaled Hosseini",
+    "genere": "Drammatici",
+    "pagine": 404,
+    "anno": 2007,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788838487033_364690489_0_0_0_75.jpg"
+},
+{
+    "titolo": "Cinquanta sfumature di grigio",
+    "autore": "E. L. James",
+    "genere": "Romantici",
+    "pagine": 548,
+    "anno": 2011,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788804729280_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "L'alchimista",
+    "autore": "Paulo Coelho",
+    "genere": "Classici",
+    "pagine": 184,
+    "anno": 1988,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788893443029_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Twilight",
+    "autore": "Stephenie Meyer",
+    "genere": "Fantasy",
+    "pagine": 412,
+    "anno": 2005,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788893253956_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "L'ombra del vento",
+    "autore": "Carlos Ruiz Zafón",
+    "genere": "Gialli",
+    "pagine": 466,
+    "anno": 2001,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788804750482_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Io prima di te",
+    "autore": "Jojo Moyes",
+    "genere": "Romantici",
+    "pagine": 390,
+    "anno": 2012,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788804662655_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Uomini che odiano le donne",
+    "autore": "Stieg Larsson",
+    "genere": "Thriller",
+    "pagine": 676,
+    "anno": 2005,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788829796052_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Il contratto",
+    "autore": "Elle Kennedy",
+    "genere": "Romantici",
+    "pagine": 368,
+    "anno": 2015,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788822786661_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Il silenzio degli innocenti",
+    "autore": "Thomas Harris",
+    "genere": "Thriller",
+    "pagine": 384,
+    "anno": 1988,
+    "copertinaURL": "https://www.ibs.it/images/9788804319573_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "L'interpretazione dei sogni",
+    "autore": "Sigmund Freud",
+    "genere": "Psicologia",
+    "pagine": 624,
+    "anno": 1899,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788804793793_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Il diario di Anna Frank",
+    "autore": "Anna Frank",
+    "genere": "Biografici",
+    "pagine": 384,
+    "anno": 1947,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788817085694_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "I pilastri della terra",
+    "autore": "Ken Follett",
+    "genere": "Storici",
+    "pagine": 1050,
+    "anno": 1989,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788804666929_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Gita al faro",
+    "autore": "Virginia Woolf",
+    "genere": "Classici",
+    "pagine": 240,
+    "anno": 1927,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788806239220_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "La casa in mezzo al mare celeste",
+    "autore": "TJ Klune",
+    "genere": "Fantasy",
+    "pagine": 352,
+    "anno": 2020,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788804813750_0_0_536_0_75.jpg"
+},
+{
+    "titolo": "Il barone rampante",
+    "autore": "Italo Calvino",
+    "genere": "Classici",
+    "pagine": 288,
+    "anno": 1957,
+    "copertinaURL": "https://www.lafeltrinelli.it/images/9788804774112_0_0_536_0_75.jpg"
+}
+]
