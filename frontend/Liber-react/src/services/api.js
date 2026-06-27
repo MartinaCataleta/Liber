@@ -1,3 +1,4 @@
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 const API_BASE = "/api/v1";
 
 // Funzione base per gestire le richieste
@@ -7,13 +8,18 @@ async function request(endpoint, options = {}) {
     options.credentials = "include";
     options.headers = { "Content-Type": "application/json", ...options.headers };
 
-    let res = await fetch(`${API_BASE}${endpoint}`, options);
+    const fullUrl = `${API_BASE_URL}${API_BASE}${endpoint}`;
+
+    let res = await fetch(fullUrl, options);
 
     // Se il server ci dice che l'Access Token è scaduto (401) e non stiamo facendo ne login ne il refresh in background
     if (res.status === 401 && endpoint !== "/auth/login" && endpoint !== "/auth/refresh") {
         try {
+
+            const refreshUrl = `${API_BASE_URL}${API_BASE}/auth/refresh`;
+
             // Proviamo a vedere se possiamo fare il refresh dell'access token
-            const refreshRes = await fetch(`${API_BASE}/auth/refresh`, { 
+            const refreshRes = await fetch(refreshUrl, { 
                 method: "POST", 
                 credentials: "include" 
             });
@@ -21,7 +27,7 @@ async function request(endpoint, options = {}) {
             if (!refreshRes.ok) throw new Error("Sessione scaduta");
 
             // Se il refresh ha successo viene ripristinato l'access token, riproviamo la chiamata originale
-            res = await fetch(`${API_BASE}${endpoint}`, options);
+            res = await fetch(fullUrl, options);
         } catch (err) {
             // Se il refresh fallisce, forziamo il logout visivo
             localStorage.removeItem("liber_user");

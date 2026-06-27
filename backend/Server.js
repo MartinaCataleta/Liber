@@ -59,7 +59,9 @@ const port = process.env.PORT || 3000;
 connectDB();
 
 app.use(cors({
-    origin: "https://liber-1.onrender.com/LoginPage", // Metti l'URL del tuo React
+    origin: ["https://liber-1.onrender.com/LoginPage", 
+        "http://localhost:5173"
+    ],
     credentials: true
 }));
 app.use(express.json()); 
