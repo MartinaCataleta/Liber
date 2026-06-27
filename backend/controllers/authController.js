@@ -75,13 +75,9 @@ async function login(req, res) {
         maxAge: 7*24*60*60*1000  
     });
      
-    //Invio AccessToken nel corpo della richiesta
-    res.cookie('accessToken',accessToken,{
-        ...cookieOptions,
-        maxAge: 15*60*1000
-    })
     res.status(200).json({
             message: "Successfully Logged",
+            accessToken: accessToken,
             user: {
                 id: user._id,
                 username: user.username,
@@ -119,15 +115,12 @@ async function refresh(req,res){
             { expiresIn: '15m' }
         );
 
-        //Aggiorno il Cookie dell'access token
-        res.cookie('accessToken', newAccessToken, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'lax',
-            maxAge: 15*60*1000
+        //Aggiorno il l'access token
+        return res.status(200).json({ 
+            message: 'token successfully updated',
+            accessToken: newAccessToken // <--- Invialo qui
         });
 
-        return res.status(200).json({ message: 'token successfully updated' });
 
     }catch(error) {
         return res.status(403).json({ message: 'Invalid or expired Refresh token', error});
@@ -146,13 +139,7 @@ async function logout(req,res){
             await RefreshToken.deleteOne({ token: refreshCookie});
         }
 
-        //Ripuliamo il browser dall'access cookie e dal refresh cookie
-
-        res.clearCookie('accessToken', {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'lax'
-        });
+        //Ripuliamo il browser dal refresh cookie
 
         res.clearCookie('refreshToken', {
             path: '/api/v1/auth/refresh', 

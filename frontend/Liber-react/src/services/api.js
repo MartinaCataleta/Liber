@@ -6,7 +6,18 @@ async function request(endpoint, options = {}) {
     
     // Options.credentials include dice al browser di inviare e ricevere i cookies
     options.credentials = "include";
-    options.headers = { "Content-Type": "application/json", ...options.headers };
+
+    const token = localStorage.getItem("accessToken");
+
+    options.headers = { 
+        "Content-Type": "application/json", 
+        ...options.headers,
+        ...(token ? { "Authorization": `Bearer ${token}` } : {})
+    };
+
+    if (endpoint === "/auth/refresh") {
+        options.credentials = "include";
+    }
 
     const fullUrl = `${API_BASE_URL}${API_BASE}${endpoint}`;
 
@@ -26,11 +37,15 @@ async function request(endpoint, options = {}) {
             
             if (!refreshRes.ok) throw new Error("Sessione scaduta");
 
+            const data = await refreshRes.json();
+            localStorage.setItem("accessToken", data.accessToken);
+            options.headers["Authorization"] = `Bearer ${data.accessToken}`;
+
             // Se il refresh ha successo viene ripristinato l'access token, riproviamo la chiamata originale
             res = await fetch(fullUrl, options);
         } catch (err) {
             // Se il refresh fallisce, forziamo il logout visivo
-            localStorage.removeItem("liber_user");
+            localStorage.removeItem("accessToken");
             window.location.href = "/"; // Rimanda alla pagina di avvio
             throw new Error("Sessione scaduta, effettua nuovamente l'accesso.");
         }
@@ -47,6 +62,10 @@ export async function login(email, password) {
         method: "POST",
         body: JSON.stringify({ email, password }),
     });
+    if (data.accessToken) {
+        localStorage.setItem("accessToken", data.accessToken);
+    }
+    return data;
 }
 
 export async function register(username, email, password) {
@@ -57,9 +76,16 @@ export async function register(username, email, password) {
 }
 
 export async function logout() {
-    return request("/auth/logout", {
+    // Chiamata al backend per invalidare il refresh token nel DB e nel cookie
+    const result = await request("/auth/logout", {
         method: "POST"
     });
+    
+    // Pulizia del nuovo sistema di token
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("liber_user");
+    
+    return result;
 }
 
 

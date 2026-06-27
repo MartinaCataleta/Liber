@@ -11,8 +11,9 @@ export function AuthProvider({ children }) { //lo dichiariamo...tutto cio che c'
     useEffect(() => {
         // Al caricamento dell'app, recuperiamo solo le info pubbliche dell'utente
         const storedUser = localStorage.getItem("liber_user");
+        const token = localStorage.getItem("accessToken");
 
-        if (storedUser) {
+        if (storedUser && token) {
             setUser(JSON.parse(storedUser));
         }
         setLoading(false); //non sto aspettando piu dati..rimpiazzo loading con altre componenti
@@ -23,8 +24,10 @@ export function AuthProvider({ children }) { //lo dichiariamo...tutto cio che c'
         
         const data = await apiLogin(email, password); //utilizza l'api di login
 
-        // Noi salviamo nel frontend solo le info base dell'utente
+        // Salvo le info dell'utente e il token
         localStorage.setItem("liber_user", JSON.stringify(data.user));
+        localStorage.setItem("accessToken", data.accessToken);
+
         setUser(data.user);
     }
  
@@ -42,6 +45,7 @@ export function AuthProvider({ children }) { //lo dichiariamo...tutto cio che c'
         } finally {
             // Svuotiamo la memoria del frontend
             localStorage.removeItem("liber_user");
+            localStorage.removeItem("accessToken");
             setUser(null);
         }
     }
