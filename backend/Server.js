@@ -63,7 +63,8 @@ app.use(cors({
         "http://localhost:5173",
         "http://172.27.48.1:5173"
     ],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json()); 
 app.use(cookieParser()); 
