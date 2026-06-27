@@ -59,7 +59,7 @@ const port = process.env.PORT || 3000;
 connectDB();
 
 app.use(cors({
-    origin: ["https://liber-1.onrender.com/LoginPage", 
+    origin: ["https://liber-1.onrender.com", 
         "http://localhost:5173"
     ],
     credentials: true
