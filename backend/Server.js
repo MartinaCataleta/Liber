@@ -60,7 +60,8 @@ connectDB();
 
 app.use(cors({
     origin: ["https://liber-1.onrender.com", 
-        "http://localhost:5173"
+        "http://localhost:5173",
+        "http://172.27.48.1:5173"
     ],
     credentials: true
 }));
@@ -81,11 +82,14 @@ const expressServer = app.listen(port, () => {
 
 
 // Inizializziamo Socket.io usando direttamente il server avviato da Express
+// Inizializziamo Socket.io
 const io = new Server(expressServer, {
   cors: {
-    origin: "*", // Permette richieste da React
-    methods: ["GET", "POST", "DELETE"]
-  }
+    origin: ["https://liber-1.onrender.com", "http://localhost:5173", "http://172.27.48.1:5173"], 
+    methods: ["GET", "POST", "DELETE"],
+    credentials: true // FONDAMENTALE se vuoi che il socket "erediti" il contesto dell'utente
+  },
+  transports: ['polling', 'websocket'] // Aggiungi questo per la stabilità su Render
 });
 
 // Salviamo l'istanza di io per usarla nei controller

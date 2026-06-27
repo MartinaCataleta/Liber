@@ -4,6 +4,7 @@ import "../style/BookPage.css";
 import { useAuth } from "../context/AuthContext";
 import { io } from "socket.io-client";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 export default function ReviewVisualizer({book}){
 
@@ -24,7 +25,10 @@ export default function ReviewVisualizer({book}){
             });
 
         // L'URL uguale a quello del backend
-        const socket = io("http://localhost:3000");
+        const socket = io(API_BASE_URL, {
+            withCredentials: true, // Fondamentale per i cookie
+            transports: ["polling", "websocket"] // Aumenta la stabilità su Render
+        });
 
         socket.on("new_review", (newReview) => {
             if (String(newReview.bookId) === String(book._id)) {
