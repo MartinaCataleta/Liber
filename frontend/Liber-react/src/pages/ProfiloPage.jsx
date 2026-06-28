@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { getInfoUser, modifyUser } from "../services/api"; 
 import "../style/ProfiloPage.css";
 
-const EMOJI_SET = ["👤", "🦊", "🦉", "🦁", "🦄", "👽", "🤖", "👻", "🤓", "🕵🏻‍♂️", "🧙🏼‍♂️", "👾"];
+const EMOJI_SET = ["👤", "🦊", "🦉", "🦁", "🦄", "👽", "🤖", "👻", "🤓", "🕵🏻‍♂️", "🧙🏼‍♂️", "👾","🥰","🤩​​","😍","😎","❄️​","🔥","​⭐","🥀","💖","❤️‍🔥​","♾️","🧿","📌"​​​​​​​];
 
 export default function ProfiloPage() {
     const [open, setIsOpen] = useState(false);
@@ -116,7 +116,7 @@ export default function ProfiloPage() {
                                 </span>
                                 <span className="modifica-profilo">
                                     Genere preferito: 
-                                    <select value={preferenzaGenere} onChange={(e) => setPreferenzaGenere(e.target.value)}>
+                                    <select type = "text" value={preferenzaGenere} onChange={(e) => setPreferenzaGenere(e.target.value)}>
                                         <option value="Classici">Classici</option>
                                         <option value="fantasy">fantasy</option>
                                         <option value="Gialli">Gialli</option>

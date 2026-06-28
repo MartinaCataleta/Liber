@@ -36,7 +36,7 @@ const userModel= new mongoose.Schema({
         type: String,
         default: '🐿️'
     },
-    prefererenzaGenere: {
+    preferenzaGenere: {
         type: String,
         enum: ['Classici','Fantasy','Gialli','Sci-fi','Romantici','Storici','Biografici','Psicologia','Thriller','Drammatici']
     },

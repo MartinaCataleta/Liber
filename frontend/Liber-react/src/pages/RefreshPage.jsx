@@ -23,7 +23,7 @@ export default function RefreshPage(){
 
             <main className='titoli-refresh'>
                 <h1>Le storie uniscono,  Liber le connette</h1>
-                <h3>Niente più letture solitarie. Scopri un sito unico in cui tracciare le tue tappe, 
+                <h3>Niente più letture solitarie. Scopri una piattaforma in cui organizzare le tue letture preferite, 
                     scambiare opinioni autentiche e vivere ogni libro insieme ad una community che ama leggere quanto te!</h3>
             </main>
 
