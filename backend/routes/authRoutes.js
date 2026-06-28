@@ -74,7 +74,7 @@ router.post('/register', AuthController.register);
  * /api/v1/auth/login:                                 
  *   post:                                               
  *     summary: Permette ad un utente esistente di accedere alla piattaforma
- *     description: Valida le credenziali e restituisce i dati dell'utente, impostando Access Token e Refresh Token nei cookie HTTP-only
+ *     description: Valida le credenziali e restituisce i dati dell'utente e un JSON contentente l'Access Token. Il Refresh Token viene impostato come cookie HTTP-only
  *     tags: [Autenticazione]                            
  *     requestBody:                                       
  *       required: true                                   
@@ -99,6 +99,8 @@ router.post('/register', AuthController.register);
  *               type: object                       
  *               properties:                             
  *                 message:                             
+ *                   type: string
+ *                 accessToken:
  *                   type: string                     
  *                 user:                             
  *                   type: object                   
@@ -138,7 +140,7 @@ router.post('/login', AuthController.login);
  * /api/v1/auth/logout:                                 
  *   post:                                               
  *     summary: Effettua il logout dell'utente
- *     description: Revoca il Refresh Token eliminandolo dal database e ripulisce i cookie di autenticazione dal browser.
+ *     description: Revoca il Refresh Token eliminandolo dal database e rimuove il cookie contenente il Refresh Token dal browser. L'Access Token lato client deve essere eliminato dalla memoria/localStorage del frontend.
  *     tags: [Autenticazione]                                        
  *     responses:                      
  *       200:                                 
@@ -149,8 +151,7 @@ router.post('/login', AuthController.login);
  *               type: object                       
  *               properties:                             
  *                 message:                             
- *                   type: string                     
- *                 user:                                                                
+ *                   type: string                                                                                  
  *       500:                                          
  *         description: Errore interno del server.      
  *         content:                                  
@@ -171,7 +172,7 @@ router.post('/logout', AuthController.logout);
  * /api/v1/auth/refresh:                                 
  *   post:                                               
  *     summary: Rigenera un nuovo Access Token
- *     description: Verifica il Refresh Token presente nei cookie. Se è valido e presente nel database, genera e imposta un nuovo Access Token nei cookie del browser
+ *     description: Verifica il Refresh Token presente nei cookie. Se è valido e presente nel database, restituisce un nuovo Access Token nel corpo della risposta JSON.
  *     tags: [Autenticazione]                                  
  *     responses:                      
  *       200:                                 
@@ -182,7 +183,9 @@ router.post('/logout', AuthController.logout);
  *               type: object                       
  *               properties:                             
  *                 message:                             
- *                   type: string                                       
+ *                   type: string 
+ *                 accessToken:
+ *                   type: string                                      
  *       401:                                            
  *         description: Unauthorized. Refresh Token mancante nei cookie (sessione scaduta).
  *         content:                                       

@@ -26,8 +26,8 @@ export default function ReviewVisualizer({book}){
 
         // L'URL uguale a quello del backend
         const socket = io(API_BASE_URL, {
-            withCredentials: true, // Fondamentale per i cookie
-            transports: ["polling", "websocket"] // Aumenta la stabilità su Render
+            withCredentials: true, 
+            transports: ["polling", "websocket"] 
         });
 
         socket.on("new_review", (newReview) => {

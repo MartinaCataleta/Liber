@@ -115,10 +115,10 @@ async function refresh(req,res){
             { expiresIn: '15m' }
         );
 
-        //Aggiorno il l'access token
+        //Aggiorno l'access token
         return res.status(200).json({ 
             message: 'token successfully updated',
-            accessToken: newAccessToken // <--- Invialo qui
+            accessToken: newAccessToken
         });
 
 

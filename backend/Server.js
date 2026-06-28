@@ -1,19 +1,21 @@
 const path = require('path');
 const dotenv = require("dotenv");
 dotenv.config({ path: path.join(__dirname, '../.env') }); //avendo il .env nella cartella principale del progetto
-const cors = require('cors');
 
+const cors = require('cors');
 const express = require("express");
 const { Server } = require("socket.io");
 const connectDB = require("./config/db");
 const cookieParser= require ("cookie-parser");
+const swaggerUi = require("swagger-ui-express");
+const swaggerJsDoc = require("swagger-jsdoc");
+
+
 const authRoutes= require("./routes/authRoutes");
 const bookRoutes= require("./routes/bookRoutes");
 const userRoutes= require("./routes/userRoutes");
 const reviewRoutes= require("./routes/reviewRoutes");
 
-const swaggerUi = require("swagger-ui-express");
-const swaggerJsDoc = require("swagger-jsdoc");
 
 const swaggerOptions = {
     swaggerDefinition: {
@@ -28,22 +30,22 @@ const swaggerOptions = {
         },
         servers: [
             {
-                url: "http://localhost:3000",
+                url: "https://liber-yogd.onrender.com",
                 description: "Server di Liber"
             }
         ],
         components: {
             securitySchemes: {
-                cookieAuth: {
-                    type: "apiKey",
-                    in: "cookie",
-                    name: "accessToken"
+                bearerAuth: {  
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT',
                 }
             }
         },
         security: [
             {
-                cookieAuth: []
+                bearerAuth: []
             }
         ]
     },

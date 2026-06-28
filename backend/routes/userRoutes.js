@@ -13,7 +13,7 @@ router.use(verifyToken);
  *     description: Restituisce i dettagli completi dell'utente correntemente autenticato tramite sessione. Richiede autenticazione.
  *     tags: [Profilo]
  *     security:
- *       - cookieAuth: []                             
+ *       - bearerAuth: []                             
  *     responses:                      
  *       200:                                 
  *         description: Informazioni del profilo recuperate con successo.  
@@ -65,7 +65,7 @@ router.get('/', ProfiloController.getInfoUser);
  *     description: Aggiorna i campi del profilo (nome, username, avatar, generi preferiti, bio). I campi non inviati nel body rimarranno invariati. Richiede autenticazione tramite cookie.
  *     tags: [Profilo]
  *     security:
- *       - cookieAuth: []
+ *       - bearerAuth: []
  *     requestBody:
  *       required: true
  *       content:

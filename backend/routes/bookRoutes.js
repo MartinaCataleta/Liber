@@ -15,7 +15,7 @@ router.use(verifyToken);
  *     description: Estrae l'intera collezione di libri dal database.
  *     tags: [Libri]
  *     security:
- *       - cookieAuth: []                             
+ *       - bearerAuth: []                             
  *     responses:                      
  *       200:                                 
  *         description: Elenco dei libri recuperato con successo.  
@@ -66,7 +66,7 @@ router.get('/',BookController.getBooks);
  *     description: Se il libro è già presente nei preferiti dell'utente loggato, lo rimuove. Se non c'è, lo aggiunge. Richiede autenticazione.
  *     tags: [Libri]
  *     security:
- *       - cookieAuth: []
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
@@ -128,7 +128,7 @@ router.post('/:id/favorite', BookController.toggleFavorite);
  *     description: Estrae i libri salvati nei preferiti dell'utente loggato, popolandoli con i dettagli. 
  *     tags: [Libri]
  *     security:
- *       - cookieAuth: []                             
+ *       - bearerAuth: []                             
  *     responses:                      
  *       200:                                 
  *         description: Elenco dei libri preferiti recuperato con successo.  

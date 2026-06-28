@@ -14,7 +14,7 @@ router.use(verifyToken);
  *     description: Restituisce l'elenco delle recensioni per un libro specifico, ordinate dalla più recente. Richiede autenticazione
  *     tags: [Recensioni]
  *     security:
- *       - cookieAuth: []
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
@@ -80,7 +80,7 @@ router.get("/:id/reviews",ReviewController.getReviews);
  *     description: Aggiunge una recensione (voto e commento) al libro specificato ed emette un evento Socket.io in tempo reale ai client connessi. Richiede autenticazione
  *     tags: [Recensioni]
  *     security:
- *       - cookieAuth: []
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
@@ -159,7 +159,7 @@ router.post("/:id/reviews",ReviewController.createReviews);
  *     description: Cancella una recensione dal database solo se l'utente che fa la richiesta ne è l'autore. Emette un evento Socket.io di cancellazione. Richiede autenticazione.
  *     tags: [Recensioni]
  *     security:
- *       - cookieAuth: []
+ *       - bearerAuth: []
  *     parameters:
  *       - in: path
  *         name: id
