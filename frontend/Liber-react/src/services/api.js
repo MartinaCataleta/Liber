@@ -81,7 +81,7 @@ export async function logout() {
         method: "POST"
     });
     
-    // Pulizia del nuovo sistema di token
+    // Pulizia dell'access token e delle info sull'utente loggato
     localStorage.removeItem("accessToken");
     localStorage.removeItem("liber_user");
     

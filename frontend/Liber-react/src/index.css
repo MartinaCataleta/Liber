@@ -4,7 +4,7 @@ body, html {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* Nasconde la barra di scorrimento orizzontale se si forma, ma permette il verticale in casi mobile */
+  overflow-x: hidden; /* Nasconde la barra di scorrimento orizzontale se si forma */
   background-color: black;
 
 }

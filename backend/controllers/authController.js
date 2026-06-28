@@ -68,7 +68,7 @@ async function login(req, res) {
         sameSite: 'lax',
     }
 
-    //Invio RefreshToken tramite Cookie HTTP-only
+    // Invio RefreshToken tramite Cookie HTTP-only
     res.cookie('refreshToken',refreshTokenStringa,{
         ...cookieOptions,
         path: "/api/v1/auth/refresh",

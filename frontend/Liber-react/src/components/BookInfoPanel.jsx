@@ -17,8 +17,7 @@ export default function BookInfoPanel({ book }) {
           />
         </div>
       </div>
-
-      {/* COLONNA DESTRA: DETTAGLI E DESCRIZIONE */}
+      
       <div className="book-info__right">
         <h1 className="book-info__title">{book.titolo}</h1>
         <h2 className="book-info__author">di {book.autore}</h2>

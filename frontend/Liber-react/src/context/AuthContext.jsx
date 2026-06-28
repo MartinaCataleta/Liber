@@ -9,14 +9,15 @@ export function AuthProvider({ children }) { //lo dichiariamo...tutto cio che c'
 
     // controlla se l'utente ha precedentemente fatto il logout o se ci sono dati ad esso relativi nel localStorage
     useEffect(() => {
-        // Al caricamento dell'app, recuperiamo solo le info pubbliche dell'utente
+
+        // Al caricamento dell'app, recuperiamo solo le info pubbliche dell'utente e l'Access token
         const storedUser = localStorage.getItem("liber_user");
         const token = localStorage.getItem("accessToken");
 
         if (storedUser && token) {
             setUser(JSON.parse(storedUser));
         }
-        setLoading(false); //non sto aspettando piu dati..rimpiazzo loading con altre componenti
+        setLoading(false); 
     }, []);
 
 
@@ -38,7 +39,7 @@ export function AuthProvider({ children }) { //lo dichiariamo...tutto cio che c'
 
     async function logout() {
         try {
-            // Chiamiamo il backend per dirgli di distruggere i cookie HTTP-Only
+            // Chiamiamo il backend per dirgli di eliminare il cookie HTTP-Only
             await apiLogout();
         } catch (error) {
             console.error("Errore durante la disconnessione", error);

@@ -1,4 +1,3 @@
-const mongoose = require ('mongoose');
 const Review= require('../models/Review');
 
 const getReviews= async(req,res)=>{
