@@ -23,7 +23,6 @@ const toggleFavoriteHandler= async (e)=>{
 
     return(
          <div className="card-box" onClick={(e)=>{
-            e.stopPropagation()
             setIsOpen(!isOpen)}}> 
             <img src={copertinaURL} alt={titolo} className="book-cover"/>
                 <div className="book-card-overlay">
@@ -32,7 +31,9 @@ const toggleFavoriteHandler= async (e)=>{
                 </div>
 
                {isOpen && (
-                <div className="opened-book-card" onClick={()=>{setIsOpen(false)}}>
+                <div className="opened-book-card" onClick={()=>{
+                    e.stopPropagation()
+                    setIsOpen(false)}}>
                     <ul>
                         <li><u>Genere:</u> {genere}</li>
                         <li><u>Pagine:</u>{pagine}</li>
