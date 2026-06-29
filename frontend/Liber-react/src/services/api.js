@@ -58,15 +58,10 @@ async function request(endpoint, options = {}) {
 
 // Rotte di autenticazione
 export async function login(email, password) {
-    const data = await request("/auth/login", {
+    return request("/auth/login", {
         method: "POST",
         body: JSON.stringify({ email, password }),
     });
-
-    if (data && data.accessToken) {
-        localStorage.setItem("accessToken", data.accessToken);
-    }
-    return data;
 }
 
 export async function register(username, email, password) {
@@ -78,15 +73,9 @@ export async function register(username, email, password) {
 
 export async function logout() {
     // Chiamata al backend per invalidare il refresh token nel DB e nel cookie
-    const result = await request("/auth/logout", {
+    return request("/auth/logout", {
         method: "POST"
     });
-    
-    // Pulizia dell'access token e delle info sull'utente loggato
-    localStorage.removeItem("accessToken");
-    localStorage.removeItem("liber_user");
-    
-    return result;
 }
 
 

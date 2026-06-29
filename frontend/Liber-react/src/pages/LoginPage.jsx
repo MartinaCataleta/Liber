@@ -74,7 +74,10 @@ export default function LoginPage() {
                             <p>{isRegister? "Hai già un account?": "Non hai un account?"}{" "}
                                 <button onClick={
                                     ()=>{setIsRegister(!isRegister);
-                                        setError(" ");
+                                        setError("");
+                                        setUsername("");
+                                        setEmail("");
+                                        setPassword("");
                                     }
                                     }>{isRegister?"Accedi":"Registrati"}</button>
                             </p>
