@@ -50,7 +50,6 @@ export default function HomePage() {
     
   
   return (
-    <> 
     <div className="sfondo-home-page">
       <Navbar />
         <div className="search-bar">
@@ -80,6 +79,5 @@ export default function HomePage() {
         )}
       </main>
     </div>
-    </>
   );
 }

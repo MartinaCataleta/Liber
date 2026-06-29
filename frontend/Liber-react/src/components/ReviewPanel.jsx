@@ -24,7 +24,6 @@ export default function ReviewPanel({ book }) {
     }
 
     return (
-        <>
             <div className="review-panel">
 
                 <form className="box-recensione" onSubmit={handleInvioRecensione}>
@@ -58,6 +57,5 @@ export default function ReviewPanel({ book }) {
                     </button>
                 </form>
             </div>
-        </>
     )
 }

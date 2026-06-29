@@ -6,7 +6,6 @@ import Logo from "../components/Logo"
 
 export default function RefreshPage(){
     return(
-        <>
         <div className="sfondo-container">
         
             <header> 
@@ -30,14 +29,6 @@ export default function RefreshPage(){
             <h3>
                  <Link className = 'refresh-call2action' to="/LoginPage"> Pronto a voltare pagina? Registrati ora. </Link>
             </h3>
-            
-            
-            
-
-        </div>
-        
-         </>
-
+        </div> 
     )
-
 }

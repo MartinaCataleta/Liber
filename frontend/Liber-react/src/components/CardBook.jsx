@@ -22,7 +22,6 @@ const toggleFavoriteHandler= async (e)=>{
 
 
     return(
-         <>
          <div className="card-box" onClick={(e)=>{
             e.preventDefault();
             setIsOpen(!isOpen)}}> 
@@ -42,19 +41,8 @@ const toggleFavoriteHandler= async (e)=>{
                         <li><Link className="link-2-discussione" to="/BookPage" state={{ book: { _id: props.id, titolo: props.titolo, autore: props.autore || props.author, genere: props.genere, pagine: props.pagine, anno: props.anno, copertinaURL: props.copertinaURL } }}>Scopri di più</Link></li>
                         
                    </ul>
-
-
-
                 </div>
-
-
                )}
-           
-
         </div>
-        
-        
-        </>
     )
-
 }

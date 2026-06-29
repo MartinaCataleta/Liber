@@ -58,11 +58,12 @@ async function request(endpoint, options = {}) {
 
 // Rotte di autenticazione
 export async function login(email, password) {
-    return request("/auth/login", {
+    const data = await request("/auth/login", {
         method: "POST",
         body: JSON.stringify({ email, password }),
     });
-    if (data.accessToken) {
+
+    if (data && data.accessToken) {
         localStorage.setItem("accessToken", data.accessToken);
     }
     return data;

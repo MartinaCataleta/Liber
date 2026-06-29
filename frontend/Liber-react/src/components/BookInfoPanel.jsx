@@ -5,7 +5,6 @@ export default function BookInfoPanel({ book }) {
 
 
   return (
-    <>
     <div className="book-info-panel">
       
       <div className="book-info__left">
@@ -39,8 +38,6 @@ export default function BookInfoPanel({ book }) {
         </div>
 
       </div>
-
     </div>
-    </>
   );
 }

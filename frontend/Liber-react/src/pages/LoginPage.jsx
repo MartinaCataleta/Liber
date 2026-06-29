@@ -33,7 +33,6 @@ export default function LoginPage() {
     
 
     return(
-        <>
         <div className="sfondo-login-page">
             <header>
                 <nav className="nav-login">
@@ -81,11 +80,7 @@ export default function LoginPage() {
                             </p>
                             
                         </div>
-            
             </div> 
-
         </div>
-
-        </>
     )
 }

@@ -29,7 +29,6 @@ export default function BibliotecaPage(){
   );
 
   return(
-      <>
        <div className="sfondo-home-page">
             <Navbar />
               <div className="search-bar">
@@ -58,9 +57,5 @@ export default function BibliotecaPage(){
               )}
             </main>
           </div>
-
-   
-      </>
-    
    )
 }

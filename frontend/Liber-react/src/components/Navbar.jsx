@@ -19,9 +19,6 @@ export default function Navbar(){
     };
 
     return(
-
-        <>
-
             <div className= "navbar-box">
                 <nav>
                     <div className = "nav-sinistra">
@@ -45,10 +42,6 @@ export default function Navbar(){
                     </div>    
 
                 </nav>  
-
             </div>
-
-        </>
-
     )
 }

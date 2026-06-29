@@ -65,7 +65,6 @@ export default function ProfiloPage() {
     };
 
     return (
-        <>
             <div className="sfondo-home-page">
                 <Navbar />
                 <div className="profile-box" onClick={(e) => e.preventDefault()}>
@@ -168,6 +167,5 @@ export default function ProfiloPage() {
                     </div>   
                 </div>
             </div>
-        </>
     );
 }

@@ -61,7 +61,6 @@ export default function ReviewVisualizer({book}){
  
 
     return(
-    <>
         <div className="review-visualizer">
             <h2 className="titolo-recensioni">Recensioni della community</h2>
             
@@ -84,6 +83,5 @@ export default function ReviewVisualizer({book}){
                 )}
             </div>
         </div>
-    </>
- )
+    )
 }
