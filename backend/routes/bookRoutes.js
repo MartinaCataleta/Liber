@@ -88,7 +88,7 @@ router.get('/',BookController.getBooks);
  *                 preferiti:
  *                   type: array
  *                   items:
- *                     types: string                                       
+ *                     type: string                                       
  *       401:                                            
  *         description: Unauthorized. Cookie accessToken mancante, scaduto o non valido.
  *         content:                                       

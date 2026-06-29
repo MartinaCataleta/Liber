@@ -117,13 +117,13 @@ export default function ProfiloPage() {
                                     Genere preferito: 
                                     <select type = "text" value={preferenzaGenere} onChange={(e) => setPreferenzaGenere(e.target.value)}>
                                         <option value="Classici">Classici</option>
-                                        <option value="fantasy">fantasy</option>
+                                        <option value="fantasy">Fantasy</option>
                                         <option value="Gialli">Gialli</option>
                                         <option value="Sci-fi">Sci-fi</option>
                                         <option value="Romantici">Romantici</option>
                                         <option value="Storici">Storici</option>
                                         <option value="Psicologia">Psicologia</option>
-                                        <option value="Biografico">Biografico</option>
+                                        <option value="Biografico">Biografici</option>
                                         <option value="Thriller">Thriller</option>
                                         <option value="Drammatici">Drammatici</option>
                                     </select>

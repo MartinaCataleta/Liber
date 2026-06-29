@@ -23,7 +23,7 @@ const bookSchema = new mongoose.Schema({
 
     copertinaURL: {
         type: String,
-        default: ' '
+        default: ""
     } 
 },{
     timestamps: true

@@ -62,7 +62,7 @@ router.get('/', ProfiloController.getInfoUser);
  * /api/v1/users/profile:
  *   put:
  *     summary: Modifica il profilo dell'utente loggato
- *     description: Aggiorna i campi del profilo (nome, username, avatar, generi preferiti, bio). I campi non inviati nel body rimarranno invariati. Richiede autenticazione tramite cookie.
+ *     description: Aggiorna i campi del profilo (nome, username, avatar, generi preferiti, bio). I campi non inviati nel body rimarranno invariati. Richiede autenticazione.
  *     tags: [Profilo]
  *     security:
  *       - bearerAuth: []

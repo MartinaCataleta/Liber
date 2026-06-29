@@ -3,7 +3,7 @@ const User = require('../models/User');
 const getInfoUser= async (req, res)=>{
     try{
         const userId = req.user.id;
-        const user = await User.findById(userId);
+        const user = await User.findById(userId).select("-password");;
 
         res.status(200).json(user);
     } catch(error){

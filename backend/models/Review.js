@@ -19,7 +19,9 @@ const reviewModel= new mongoose.Schema({
     },
     commento: {
         type: String,
-        required: true
+        required: true,
+        trim: true,
+        maxlength: [1000, 'Il commento non può superare i 1000 caratteri']
     }
 },
     {
