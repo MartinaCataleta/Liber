@@ -31,7 +31,7 @@ const toggleFavoriteHandler= async (e)=>{
                 </div>
 
                {isOpen && (
-                <div className="opened-book-card" onClick={()=>{
+                <div className="opened-book-card" onClick={(e)=>{
                     e.stopPropagation()
                     setIsOpen(false)}}>
                     <ul>
